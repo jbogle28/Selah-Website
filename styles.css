@@ -233,30 +233,53 @@ li {
     background: var(--deep-forest);
 }
 
-/* --- Mobile Menu Responsive Logic --- */
+/* --- Updated Mobile Navigation Layout --- */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Show hamburger on mobile */
+    /* Changes nav to side-by-side instead of stacked */
+    nav {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 10px 20px;
     }
 
+    /* Keep the logo on the left and resize for mobile */
+    .logo img {
+        height: 50px; 
+    }
+
+    /* Hamburger icon stays tucked to the right */
+    .menu-toggle {
+        display: block; 
+        order: 2; /* Ensures it stays on the right */
+    }
+
+    /* Navigation list now drops down from the header */
     .nav-list {
-        display: none; /* Hide links initially on mobile */
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 100%; /* Sits directly under the header */
+        left: 0;
         width: 100%;
-        text-align: center;
         background-color: white;
         padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        border-top: 1px solid var(--soft-taupe);
+        z-index: 999;
     }
 
     .nav-list.active {
-        display: flex; /* Show links when toggled */
+        display: flex;
     }
 
-    /* Animation: Makes the bars turn into an 'X' when active */
-    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    nav ul {
+        gap: 15px;
+        border-top: none; /* Removes the line we used for desktop */
+        padding-top: 0;
+    }
 }
+
 
 /* --- Appointment Form Styling --- */
 .appointment-form {
@@ -302,4 +325,5 @@ li {
 input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(80deg); /* Shades it toward your green */
+
 }
