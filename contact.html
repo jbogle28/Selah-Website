@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Selah Therapeutic Services Limited</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/black_logo.png" alt="Selah Therapeutic Services Limited Logo">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Meet the Therapist</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </header>
+
+    <main>
+        <section class="contact-intro">
+            <h1>Contact Selah Therapeutic Services Limited</h1>
+            <p><strong>You don’t have to walk this journey alone.</strong></p>
+            <p>Thank you for taking the first step toward healing. Whether you have a question, want to schedule a consultation, or need more information about services, I am here to help.</p>
+        </section>
+
+        <section class="get-in-touch">
+            <h2>Get in Touch</h2>
+            <ul>
+                <li><strong>Phone:</strong> (XXX) XXX-XXXX (Confidential voicemail available) </li>
+                <li><strong>Email:</strong> info@selahtherapeuticservices.com (Messages are responded to within 1–2 business days) </li>
+                <li><strong>Location:</strong> [Insert City/Region Here] (In-person and secure virtual appointments available) </li>
+                <li><strong>Hours:</strong> By appointment only </li>
+            </ul>
+        </section>
+
+    <section class="booking">
+        <h2>Request an Appointment</h2>
+        <p>Please fill out the form below to request a session. I will review your request and contact you to confirm the time.</p>
+        
+        <form action="https://formspree.io/f/xpqzwjda" method="POST" id="appointment-form" class="appointment-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="name" required placeholder="Your first and last name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="(XXX) XXX-XXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service...</option>
+                    <option value="individual-therapy">Individual Psychotherapy</option>
+                    <option value="trauma-therapy">Trauma-Informed Therapy</option>
+                    <option value="cbt-mindfulness">CBT & Mindfulness</option>
+                    <option value="spiritual-integrative">Spiritual Integrative Counseling</option>
+                    <option value="assessment-consultation">Psychological Assessment Consultation</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Additional Information (Optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Briefly describe what you are seeking support for..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit Booking Request</button>
+        </form>
+    </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/white_logo.png" alt="Selah Logo White" class="footer-logo">
+            <div class="contact-summary">
+                <p>Email: info@selahtherapeuticservices.com</p>
+                <p>Hours: By appointment only</p>
+            </div>
+            
+            <div class="legal-disclaimer">
+                <p><strong>Privacy & Confidentiality:</strong> Your communications are protected under HIPAA and CPAM standards. </p>
+                <p><strong>Crisis Support:</strong> If you are in immediate danger, please contact your local emergency number.</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Selah Therapeutic Services Limited. Healing Begins with a Pause.</p>
+    </footer>
+
+</body>
+</html>

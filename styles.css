@@ -1,0 +1,305 @@
+/* --- Root Variables & Theme --- */
+:root {
+    --sage-green: #9CAF88;
+    --deep-forest: #2D4030;
+    --soft-taupe: #D7D2CB;
+    --off-white: #F9F8F6;
+    --muted-gold: #C5A059;
+    --text-dark: #333333;
+    --header-font: 'Playfair Display', serif;
+    --body-font: 'Lato', sans-serif;
+}
+
+/* --- Global Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--off-white);
+}
+
+h1, h2, h3 {
+    font-family: var(--header-font);
+    color: var(--deep-forest);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-weight: 300; /* Light weight for a modern feel */
+}
+
+/* --- Layout Containers --- */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--soft-taupe);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* --- Header & Navigation (Centered Adjustment) --- */
+header {
+    background: white;
+    padding: 30px 0 20px 0; /* More top padding for the logo */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stacks logo on top of menu */
+    align-items: center;    /* Centers everything horizontally */
+    gap: 20px;              /* Space between logo and menu */
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 80px; /* Slightly larger since it's centered */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; /* Wider gap for a cleaner look */
+    border-top: 1px solid var(--soft-taupe); /* Optional: thin line to separate logo from nav */
+    padding-top: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--deep-forest);
+    font-weight: 400;
+    text-transform: uppercase; /* Professional navigation style */
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--sage-green);
+}
+
+/* --- Mobile Adjustment --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    background-color: var(--sage-green);
+    color: white;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 400;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--deep-forest);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section (Home Page) --- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--sage-green);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--deep-forest);
+    color: var(--soft-taupe);
+    padding: 60px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.legal-disclaimer {
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    grid-column: 1 / span 2;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer > p:last-child {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+/* --- Specific Page Styling --- */
+.principle, .contact-intro {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+ul {
+    padding-left: 20px;
+    margin-bottom: 1.2rem;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* --- Mobile Menu Icon --- */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: var(--deep-forest);
+}
+
+/* --- Mobile Menu Responsive Logic --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-list {
+        display: none; /* Hide links initially on mobile */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        padding: 20px 0;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show links when toggled */
+    }
+
+    /* Animation: Makes the bars turn into an 'X' when active */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+/* --- Appointment Form Styling --- */
+.appointment-form {
+    max-width: 600px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--deep-forest);
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--soft-taupe);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--sage-green);
+    box-shadow: 0 0 5px rgba(156, 175, 136, 0.3);
+}
+
+/* Styling the Date Picker for consistent look */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(30%) sepia(10%) saturate(1000%) hue-rotate(80deg); /* Shades it toward your green */
+}
