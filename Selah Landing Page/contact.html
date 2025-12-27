@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Selah Therapeutic Services Limited</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/black_logo.png" alt="Selah Therapeutic Services Limited Logo">
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Meet the Therapist</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </header>
+
+    <main>
+    <section class="contact-intro tinted-section contact-bg">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Contact Selah Therapeutic Services Limited</h1>
+            <p class="tagline"><strong>You don’t have to walk this journey alone.</strong></p>
+            <p>Thank you for taking the first step toward healing. Whether you have a question, want to schedule a consultation, or need more information, I am here to help.</p>
+        </div>
+    </section>
+
+    <section class="get-in-touch">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3>Phone</h3>
+                <p>(XXX) XXX-XXXX</p>
+                <span>Confidential voicemail available</span>
+            </div>
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p>info@selahtherapeuticservices.com</p>
+                <span>Responded to within 1–2 business days</span>
+            </div>
+            <div class="contact-card">
+                <h3>Location</h3>
+                <p>[Insert City/Region Here]</p>
+                <span>In-person & secure virtual available</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking">
+        <div class="form-container">
+            <h2>Request an Appointment</h2>
+            <p>Please fill out the form below. I will review your request and contact you to confirm the time.</p>
+            
+            <form action="https://formspree.io/f/xpqzwjda" method="POST" class="appointment-form">
+                <input type="hidden" name="_next" value="https://selahtherapeutics.ky/thank-you.html">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="name" required placeholder="Your first and last name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="email@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Contact Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="(XXX) XXX-XXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Select a service...</option>
+                        <option value="individual-therapy">Individual Psychotherapy</option>
+                        <option value="couples-therapy">Couples Therapy</option>
+                        <option value="group-therapy">Group Therapy</option>
+                        <option value="spiritual-integrative">Spiritual Integrative Counseling</option>
+                        <option value="assessment-consultation">Psychological Assessment</option>
+                        <option value="case-consultation">Case Consultation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Information (Optional)</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Briefly describe what you are seeking support for..."></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Submit Booking Request</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <img src="images/white_logo.png" alt="Selah Logo White" class="footer-logo">
+            <div class="contact-summary">
+                <p>Email: info@selahtherapeuticservices.com</p>
+                <p>Hours: By appointment only</p>
+            </div>
+            
+            <div class="legal-disclaimer">
+                <p><strong>Privacy & Confidentiality:</strong> Your communications are protected under HIPAA and CPAM standards. </p>
+                <p><strong>Crisis Support:</strong> If you are in immediate danger, please contact your local emergency number.</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Selah Therapeutic Services Limited. Healing Begins with a Pause.</p>
+    </footer>
+
+</body>
+</html>
+
