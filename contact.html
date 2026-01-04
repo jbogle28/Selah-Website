@@ -74,8 +74,7 @@
             <h2>Request an Appointment</h2>
             <p>Please fill out the form below. I will review your request and contact you to confirm the time.</p>
             
-            <form action="https://formspree.io/f/xpqzwjda" method="POST" class="appointment-form">
-                <input type="hidden" name="_next" value="thank-you.html">
+            <form id="appointment-form" action="https://formspree.io/f/xpqzwjda" method="POST" class="appointment-form">
                 <div class="form-group">
                     <label for="full-name">Full Name</label>
                     <input type="text" id="full-name" name="name" required placeholder="Your first and last name">
@@ -114,7 +113,7 @@
                     <textarea id="message" name="message" rows="4" placeholder="Briefly describe what you are seeking support for..."></textarea>
                 </div>
 
-                <button type="submit" class="btn submit-btn">Submit Booking Request</button>
+                <button  id="submit-btn" type="submit" class="btn submit-btn">Submit Booking Request</button>
             </form>
         </div>
     </section>
