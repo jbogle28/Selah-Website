@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Client Intake | Selah Therapeutic Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/black_logo.png" alt="Selah Therapeutic Services Limited Logo">
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Meet the Therapist</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="mission.html">Our Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="scrolling-banner">
+        <div class="scrolling-text">
+            <span>Healing Begins with a Pause &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; </span>
+            <span>Healing Begins with a Pause &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; </span>
+            <span>Healing Begins with a Pause &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; </span>
+            <span>Healing Begins with a Pause &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; </span>
+        </div>
+    </div>
+    <main>
+        <section class="about-hero-box">
+            <div class="content-wrapper">
+                <h1>Complete Client Intake Form</h1>
+                <p>Please provide the following information for our records. You may leave blank any questions you prefer to discuss in person[cite: 3].</p>
+            </div>
+        </section>
+
+        <section class="booking">
+            <div class="form-container">
+                <form action="https://formspree.io/f/xpqzwjda" method="POST" class="appointment-form">
+                    <input type="hidden" name="_next" value="https://selahtherapeutics.ky/thank-you.html">
+
+                    <div class="principle">
+                        <h2 style="color: var(--sage-green); margin-bottom: 20px;">1. Client Information</h2>
+                        <div class="form-group">
+                            <label>Full Legal Name</label>
+                            <input type="text" name="full_name" required [cite: 4]>
+                        </div>
+                        <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <label>Date of Birth</label>
+                                <input type="date" name="dob" required [cite: 4]>
+                            </div>
+                            <div>
+                                <label>Gender</label>
+                                <input type="text" name="gender" [cite: 4]>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Marital Status</label>
+                            <select name="marital_status" [cite: 4]>
+                                <option value="single">Single</option>
+                                <option value="married">Married</option>
+                                <option value="divorced">Divorced</option>
+                                <option value="separated">Separated</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Address & P.O. Box</label>
+                            <textarea name="address" rows="2" [cite: 4, 5]></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" [cite: 5]>
+                            <label style="font-weight: 400; font-size: 0.9rem; margin-top: 5px;">
+                                <input type="checkbox" name="voicemail_consent"> Can we leave a voicemail? [cite: 5]
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" [cite: 5]>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred method of contact</label>
+                            <select name="preferred_contact" [cite: 6]>
+                                <option value="phone">Phone</option>
+                                <option value="email">Email</option>
+                                <option value="text">Text</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="principle">
+                        <h2 style="color: var(--sage-green); margin-bottom: 20px;">2. Insurance & Referral</h2>
+                        <div class="form-group">
+                            <label>Insurance Provider</label>
+                            <input type="text" name="insurance_provider" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Member ID</label>
+                            <input type="text" name="member_id" placeholder="Insurance Member ID">
+                        </div>
+                        <div class="form-group">
+                            <label>Group Number</label>
+                            <input type="text" name="group_number" placeholder="Group Number/ID">
+                        </div>                             
+                        <div class="form-group">
+                            <label>How did you hear about this practice?</label>
+                            <input type="text" name="referral_source" [cite: 6, 7]>
+                        </div>
+                        <div class="form-group">
+                            <label>Main concerns or reasons for referral</label>
+                            <textarea name="reason_for_referral" rows="4" placeholder="Please briefly provide information regarding the reason for the referral.  What are the main concerns/struggles you are experiencing? "></textarea>
+                        </div>
+                    </div>
+
+                    <div class="principle">
+                        <h2 style="color: var(--sage-green); margin-bottom: 20px;">3. Clinical Screening</h2>
+                        <div class="form-group">
+                            <label>Current Symptoms (Check all that apply) </label>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                                <label style="font-weight: normal;"><input type="checkbox" name="symptoms" value="Anxiety"> Anxiety</label>
+                                <label style="font-weight: normal;"><input type="checkbox" name="symptoms" value="Depression"> Depression</label>
+                                <label style="font-weight: normal;"><input type="checkbox" name="symptoms" value="Trauma"> Trauma/PTSD</label>
+                                <label style="font-weight: normal;"><input type="checkbox" name="symptoms" value="Sleep Issues"> Sleep Issues</label>
+                                <label style="font-weight: normal;"><input type="checkbox" name="symptoms" value="Panic"> Panic Attacks</label>
+                                <label style="font-weight: normal;"><input type="checkbox" name="symptoms" value="Irritability"> Irritability</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Are you currently having thoughts of harming yourself or others? </label>
+                            <select name="risk_assessment" required>
+                                <option value="no">No</option>
+                                <option value="yes">Yes</option>
+                            </select>
+                            <textarea name="risk_details" placeholder="If yes, please describe..." rows="2" style="margin-top: 10px;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="principle">
+                        <h2 style="color: var(--sage-green); margin-bottom: 20px;">4. Health & Social History</h2>
+                        <div class="form-group">
+                            <label>Current Medications (Physical or Psychiatric) </label>
+                            <textarea name="medications" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Sleep, Appetite, or Exercise Habits [cite: 28, 29]</label>
+                            <textarea name="lifestyle_habits" placeholder="Describe any sleep issues or appetite changes" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Religious or Spiritual Background </label>
+                            <input type="text" name="spiritual_background" placeholder="Faith or spiritual values (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <label>Best hopes for therapy? [cite: 48]</label>
+                            <textarea name="therapy_goals" rows="3" placeholder="What do you ideally hope to gain?"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="principle" style="background-color: #f4f7f4; border-left: 5px solid var(--sage-green);">
+                        <h2 style="color: var(--deep-forest); margin-bottom: 20px;">5. Consents & Acknowledgments</h2>
+                        <p style="font-size: 0.9rem;">
+                            By submitting this form, I indicate that I consent to psychological evaluation[cite: 49]. 
+                            I understand that participation is voluntary and sessions last approximately 45-55 minutes[cite: 53, 55]. 
+                            Confidentiality will be maintained in accordance with the Health Practice Law of the Cayman Islands.
+                        </p>
+                        <div class="form-group">
+                            <label style="font-weight: 700;">
+                                <input type="checkbox" name="policy_agreement" required> I acknowledge the Notice of Privacy Practices and Office Policies[cite: 18].
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; font-size: 1.1rem; padding: 20px;">Submit Comprehensive Intake</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <img src="images/white_logo.png" alt="Selah Logo White" class="footer-logo">
+            <p><strong>Selah Therapeutic Services</strong></p>
+            <p>Elizabethan Square, Eden House Building</p>
+            <p>4th Floor Unit EH2, 80 Shedden Road</p>
+            <p>George Town, Grand Cayman </p>
+        </div>
+        
+        <div class="contact-summary">
+            <p><strong>Email:</strong> info@selahtherapeutics.ky</p>
+            <p><strong>Phone:</strong> 1-(345)-938-0140 </p>
+            <p><strong>Hours:</strong> By appointment only</p>
+        </div>
+        
+        <div class="legal-disclaimer">
+            <p>
+                <strong><a href="privacy.html" class="footer-link">Privacy & Confidentiality:</a></strong> 
+                Your information is protected under the Health Practice Commission of the Cayman Islands (HPC) and HIPAA standards.
+            </p>
+            <p><strong>Crisis Support:</strong> If you are in immediate danger, please contact your local emergency number. Selah does not provide emergency crisis services.</p>
+        </div>
+    </div>
+    <p>&copy; 2025 Selah Therapeutic Services Limited. Healing Begins with a Pause.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

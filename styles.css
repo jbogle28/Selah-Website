@@ -183,6 +183,17 @@ footer > p:last-child {
     margin-top: 40px;
     opacity: 0.7;
 }
+/* Styling for the privacy link in footer */
+.footer-link {
+    color: var(--soft-taupe); /* Matches your footer text color */
+    text-decoration: none;    /* Removes the underline */
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--sage-green); /* Subtle color change when hovered */
+    text-decoration: underline; 
+}
 
 /* --- Specific Page Styling --- */
 .principle, .contact-intro {
@@ -233,6 +244,14 @@ li {
     background: var(--deep-forest);
 }
 
+/* Styling for the page you are currently on */
+.nav-list li a.active-page {
+    color: var(--sage-green); /* Highlights in your brand green */
+    font-weight: 700;         /* Makes it slightly bolder */
+    border-bottom: 2px solid var(--sage-green); /* Adds a subtle underline indicator */
+    padding-bottom: 5px;
+}
+
 /* --- Updated Mobile Navigation Layout --- */
 @media (max-width: 768px) {
     /* Changes nav to side-by-side instead of stacked */
@@ -279,7 +298,42 @@ li {
         padding-top: 0;
     }
 }
+/* --- Constant Scrolling Banner --- */
+.scrolling-banner {
+    width: 100%;
+    background-color: var(--sage-green);
+    color: white;
+    overflow: hidden;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+}
 
+.scrolling-text {
+    display: flex;
+    white-space: nowrap;
+    /* This makes the animation continuous */
+    animation: constant-scroll 20s linear infinite; 
+}
+
+.scrolling-text span {
+    font-family: var(--header-font);
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding-right: 20px; /* Space between the repeated phrases */
+}
+
+/* The Logic for the Loop */
+@keyframes constant-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* This moves the text exactly half-way so it loops perfectly */
+        transform: translateX(-50%);
+    }
+}
 
 /* --- Appointment Form Styling --- */
 .appointment-form {
@@ -565,7 +619,58 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     transition: all 0.3s ease;
 }
 
-/* --- Mission Principles Background --- */
-.mission-bg {
-    background-image: url('images/mission-hero.png');
+/* --- Mission Page Adjustments --- */
+.mission-principles {
+    background-color: var(--off-white);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.mission-principles h2 {
+    margin-bottom: 40px;
+}
+
+.mission-principles .principle {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow for depth */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; /* Aligns text for better readability */
+    border-left: 5px solid var(--sage-green); /* Adds a professional brand accent */
+}
+
+.mission-principles .principle h3 {
+    color: var(--deep-forest);
+    margin-bottom: 10px;
+}
+
+.mission-principles .principle p {
+    color: var(--text-dark); /* Ensures text is visible */
+    margin-bottom: 0;
+}
+
+/* --- Shared Page Layouts --- */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Standardizing the Hero Boxes across About/Services/Privacy */
+.about-hero-box, .services-hero-box {
+    padding: 80px 20px;
+    border-bottom: 1px solid var(--soft-taupe);
+}
+
+.about-hero-box { background-color: #f9fbf9; } /* Very light sage tint */
+.services-hero-box { background-color: #f4f7f4; } /* Slightly deeper tint */
+
+/* Ensure text stays dark on these light backgrounds */
+.about-hero-box h1, .about-hero-box p,
+.services-hero-box h2, .services-hero-box p {
+    color: var(--text-dark) !important;
 }

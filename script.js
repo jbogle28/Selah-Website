@@ -1,40 +1,20 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.nav-list');
+const navItems = document.querySelectorAll('.nav-list li a');
 
-// This function toggles the "active" class when the menu is clicked
+// 2. Existing toggle function
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
 });
 
-//Appointment sumission
-const appointmentForm = document.querySelector('#appointment-form');
+// 3. New Active Link Logic
+// This loops through every link and checks if its address matches the current page
+const currentPath = window.location.pathname;
 
-if (appointmentForm) {
-    appointmentForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const data = new FormData(appointmentForm);
-        const response = await fetch(appointmentForm.action, {
-            method: 'POST',
-            body: data,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            // Success Message
-            appointmentForm.innerHTML = `
-                <div style="text-align: center; padding: 40px;">
-                    <h3 style="color: var(--sage-green);">Request Received.</h3>
-                    <p>Thank you for reaching out. Please take a moment to pause and breathe; I will be in touch within 1-2 business days.</p>
-                    <span style="font-size: 2rem;">🌿</span>
-                </div>
-            `;
-        } else {
-            // Error Message
-            alert("Oops! There was a problem submitting your form. Please try again or email me directly.");
-        }
-    });
-}
+navItems.forEach(link => {
+    // If the link's href matches the current path, add the 'active-page' class
+    if (link.getAttribute('href') === currentPath.split("/").pop()) {
+        link.classList.add('active-page');
+    }
+});
