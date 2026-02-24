@@ -43,6 +43,9 @@ if (appointmentForm) {
             });
 
             if (response.ok) {
+                
+                const nameValue = formData.get('name'); // Matches the 'name' attribute in your HTML
+                sessionStorage.setItem('submittedName', nameValue);
                 window.location.replace("thank-you.html");
             } else {
                 throw new Error('Submission failed');
@@ -55,5 +58,6 @@ if (appointmentForm) {
         }
     });
 }
+
 
 
