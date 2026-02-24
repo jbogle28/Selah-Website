@@ -2,13 +2,36 @@ const appointmentForm = document.getElementById('appointment-form');
 
 if (appointmentForm) {
     appointmentForm.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevents the page from refreshing immediately
+        event.preventDefault();
         
         const btn = document.getElementById('submit-btn');
-        btn.innerHTML = "Sending..."; // Visual feedback for the client
-        btn.disabled = true;
-
         const formData = new FormData(event.target);
+
+        // 1. Honeypot Check (Spam Prevention)
+        if (formData.get('_gotcha')) {
+            console.log("Spam detected.");
+            return; // Silently drop the submission
+        }
+
+        // 2. Link Detection (Block external URLs)
+        const message = formData.get('message');
+        const urlPattern = /(https?:\/\/[^\s]+|www\.[^\s]+)/gi;
+        
+        if (urlPattern.test(message)) {
+            alert("For security reasons, links/URLs are not allowed in the message field. Please remove them to continue.");
+            return; 
+        }
+
+        // 3. Name Validation (Prevent junk entries like "12345")
+        const name = formData.get('name');
+        if (name.length < 2) {
+            alert("Please enter a valid full name.");
+            return;
+        }
+
+        // --- Visual feedback ---
+        btn.innerHTML = "Sending...";
+        btn.disabled = true;
 
         try {
             const response = await fetch(event.target.action, {
@@ -20,13 +43,12 @@ if (appointmentForm) {
             });
 
             if (response.ok) {
-                // Redirects specifically to the filename as you requested
                 window.location.href = "thank-you.html";
             } else {
                 throw new Error('Form submission failed');
             }
         } catch (error) {
-            btn.innerHTML = "Send Request";
+            btn.innerHTML = "Submit Booking Request";
             btn.disabled = false;
             alert("Oops! There was a problem. Please try again or call us at 1-(345)-938-0140.");
         }
