@@ -37,20 +37,28 @@ if (appointmentForm) {
             const response = await fetch(event.target.action, {
                 method: 'POST',
                 body: formData,
+                // 'manual' tells the browser: "Don't follow the form provider's redirect, let my JS handle it."
+                redirect: 'manual', 
                 headers: {
                     'Accept': 'application/json'
                 }
             });
 
-            if (response.ok) {
-                window.location.href = "thank-you.html";
+            // If the response is OK (200) or OPAQUE (the provider tried to redirect us)
+            if (response.ok || response.type === 'opaqueredirect') {
+                console.log("Submission successful. Navigating to thank-you page...");
+                window.location.assign("thank-you.html");
             } else {
-                throw new Error('Form submission failed');
+                // Read the error body if possible for better debugging
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || 'Form submission failed');
             }
         } catch (error) {
+            console.error("Submission Error:", error);
             btn.innerHTML = "Submit Booking Request";
             btn.disabled = false;
             alert("Oops! There was a problem. Please try again or call us at 1-(345)-938-0140.");
         }
     });
 }
+
