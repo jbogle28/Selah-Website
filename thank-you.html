@@ -9,8 +9,70 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clinical Psychological Services | Selah Therapeutic Services Grand Cayman</title>
-    <meta name="description" content="Explore our range of evidence-based psychological services in George Town, including individual therapy, couples counseling, and diagnostic assessments.">
+    <title>Thank You | Selah Therapeutic Services</title>
+    <style>
+        .thank-you-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 70vh;
+            padding: 20px;
+            /* Using a soft brand-adjacent off-white/grey background */
+            background-color: #fcfcfc; 
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSmooth 1s ease-out forwards;
+        }
+
+        @keyframes fadeInSmooth {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .thank-you-card {
+            max-width: 600px;
+            background: white;
+            padding: 50px;
+            border-radius: 2px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid #333; /* Using your brand's dark accent */
+        }
+
+        .thank-you-card h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .thank-you-card p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .process-info {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 3px solid #ddd;
+            text-align: left;
+        }
+
+        .process-info h4 {
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,73 +83,42 @@
                     <img src="images/black_logo.png" alt="Selah Therapeutic Services Limited Logo">
                 </a>
             </div>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="/meet-the-therapist">Meet the Therapist</a></li>
-                <li class="dropdown">
-                    <a href="/psychological-services-grand-cayman" class="dropdown-toggle">Services</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/individual-therapy-grand-cayman">Individual Psychotherapy</a></li>
-                        <li><a href="/couples-counseling-grand-cayman">Couples Psychotherapy</a></li>
-                        <li><a href="/group-therapy-grand-cayman">Group Psychotherapy</a></li>
-                        <li><a href="/christian-counseling-grand-cayman">Christian Integrative Counseling</a></li>
-                        <li><a href="/employee-assistance-grand-cayman">Employee Assistance Programme</a></li>
-                        <li><a href="/psychological-testing-grand-cayman">Psychological Assessment</a></li>
-                        <li><a href="/clinical-case-consultation-grand-cayman">Case Consultations</a></li>
-                    </ul>
-                </li>
-                <li><a href="/our-mission">Our Mission</a></li>
-                <li><a href="/contact-us-selah">Contact</a></li>
+                <li><a href="meet-the-therapist.html">Meet the Therapist</a></li>
+                <li><a href="psychological-services-grand-cayman.html">Services</a></li>
+                <li><a href="our-mission.html">Our Mission</a></li>
+                <li><a href="contact-us-selah.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="tinted-section contact-bg" style="height: 100vh;">
-            <div class="overlay"></div>
-            <div class="content">
-                <h1>Thank You</h1>
-                <p>Your message has been received. I truly appreciate you reaching out.</p>
-                <p>I will review your request and get back to you via email or phone within 1–2 business days.</p>
-                <br>
-                <a href="index.html" class="btn">Return to Home</a>
+    <main class="thank-you-container">
+        <div class="thank-you-card">
+            <h1>Thanks, <span id="user-name">there</span>.</h1>
+            <p>Your booking request has been successfully submitted. We understand that reaching out is a significant step, and we appreciate your trust in Selah.</p>
+            
+            <div class="process-info">
+                <h4>What happens next?</h4>
+                <p>• <strong>Review:</strong> Your request will be reviewed within <strong>1–2 business days</strong>.</p>
+                <p>• <strong>Contact:</strong> I will reach out via your preferred contact method to confirm your appointment time.</p>
             </div>
-        </section>
+
+            <p>If you have an urgent inquiry, please feel free to call us directly.</p>
+            <br>
+            <a href="index.html" class="btn">Return to Homepage</a>
+        </div>
     </main>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-brand">
-            <img src="images/white_logo.png" alt="Selah Logo White" class="footer-logo">
-            <p><strong>Selah Therapeutic Services</strong></p>
-            <p>Elizabethan Square, Eden House Building</p>
-            <p>4th Floor Unit EH2, 80 Shedden Road</p>
-            <p>George Town, Grand Cayman, Cayman Islands</p>
-        </div>
-        
-        <div class="contact-summary">
-            <p><strong>Email:</strong> info@selahtherapeutics.ky</p>
-            <p><strong>Phone:</strong> 1-(345)-938-0140 </p>
-            <p><strong>Hours:</strong> By appointment only</p>
-        </div>
-        
-        <div class="legal-disclaimer">
-            <p>
-                <strong><a href="privacy-policy.html" class="footer-link">Privacy & Confidentiality:</a></strong> 
-                Your information is protected in accordance with the Health Practice Commission (HPC) of the Cayman Islands and the Cayman Islands Data Protection Act.
-            </p>
-            <p><strong>Crisis Support:</strong> If you are in immediate danger, please contact your local emergency number. Selah does not provide emergency crisis services.</p>
-        </div>
-    </div>
-    <p>&copy; 2025 Selah Therapeutic Services Limited. Healing Begins with a Pause.</p>
-</footer>
+    <script>
+        // Personalized Name Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const name = sessionStorage.getItem('submittedName');
+            if (name) {
+                document.getElementById('user-name').textContent = name;
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
-
-
