@@ -1,3 +1,18 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/therapy-in-grand-cayman", "destination": "/index.html" },
+    { "source": "/meet-the-therapist", "destination": "/about.html" },
+    { "source": "/psychological-services-grand-cayman", "destination": "/services.html" },
+    { "source": "/individual-therapy-grand-cayman", "destination": "/individual-psychotherapy.html" },
+    { "source": "/couples-counseling-grand-cayman", "destination": "/couples-psychotherapy.html" },
+    { "source": "/group-therapy-grand-cayman", "destination": "/group-psychotherapy.html" },
+    { "source": "/christian-counseling-grand-cayman", "destination": "/christian-integrative-counseling.html" },
+    { "source": "/employee-assistance-grand-cayman", "destination": "/eap.html" },
+    { "source": "/psychological-testing-grand-cayman", "destination": "/psychological-assessment.html" },
+    { "source": "/clinical-case-consultation-grand-cayman", "destination": "/case-consultations.html" },
+    { "source": "/our-mission", "destination": "/mission.html" },
+    { "source": "/contact-us-selah", "destination": "/contact.html" },
+    { "source": "/privacy-policy", "destination": "/privacy.html" }
+  ]
 }
