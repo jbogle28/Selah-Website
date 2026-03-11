@@ -1521,3 +1521,73 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         padding: 25px; /* Slightly tighter padding on small screens */
     }
 }
+
+
+/* Pricing Section Styles */
+.pricing-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.pricing-disclaimer {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.pricing-table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto; /* Ensures it's readable on small phones */
+}
+
+.pricing-table-container h3 {
+    text-align: left;
+    color: #87a982; /* Sage Green */
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.pricing-table thead {
+    background-color: #2d3e30; /* Darker Slate/Green for headers */
+    color: white;
+}
+
+.pricing-table th, .pricing-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: #f9fbf9; /* Very light sage tint */
+}
+
+.pricing-table td:last-child {
+    font-weight: 700;
+    color: #333;
+}
+
+.additional-pricing {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .pricing-table th, .pricing-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
