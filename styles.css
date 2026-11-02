@@ -437,7 +437,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .lead-text {
-    font-size: 1.0rem;
+    font-size: 0.9rem;
     color: #555;
     max-width: 800px;
     margin: 0 auto 50px;
@@ -464,7 +464,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: #f9fbf9;
     padding: 12px 15px;
     border-radius: 8px;
-    font-size: 0.8 rem;
+    font-size: 0.5 rem;
     color: #444;
     border-left: 3px solid var(--sage-green);
 }
